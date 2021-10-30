@@ -12,8 +12,15 @@
 #SBATCH -e rpllfp-slurm.%N.%j.err # STDERR
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
+/data/miniconda3/bin/conda init
+source ~/.bashrc
+envarg=`/data/src/PyHipp/envlist.py`
+conda activate $envarg
+
 python -u -c "import PyHipp as pyh; \
 	import time; \
 	pyh.RPLLFP(saveLevel=1); \
 	print(time.localtime());"
 
+conda deactivate 
+/data/src/PyHipp/envlist.py $envarg
