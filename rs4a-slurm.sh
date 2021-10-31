@@ -19,7 +19,7 @@ python -u -c "import PyHipp as pyh; \
 	import os; \
 	t0 = time.time(); \
 	print(time.localtime()); \
-	DPT.objects.processDirs(dirs=None, objtype=pyh.RPLSplit, channel=[*range(96,125)], SkipHPC=False, HPCScriptsDir = '/data/src/PyHipp/', SkipLFP=False, SkipHighPass=False, SkipSort=False); \
+	DPT.objects.processDirs(dirs=None, objtype=pyh.RPLSplit, channel=[*range(97,125)], SkipHPC=False, HPCScriptsDir = '/data/src/PyHipp/', SkipLFP=False, SkipHighPass=False, SkipSort=False); \
 	print(time.localtime()); \
 	print(time.time()-t0);"
 
